@@ -1,0 +1,21 @@
+# Example patterns file for Nostr vanity npub generator
+# Lines starting with # are comments
+# Each line should contain one pattern
+# Valid characters: 023456789acdefghjklmnpqrstuvwxyz
+
+# Short patterns (fast to find)
+test
+zap
+key
+gm
+
+# Medium patterns (moderate time)
+sat
+dev
+hack
+fun
+
+# Longer patterns (will take more time)
+# bitcoin
+# lightning
+# freedom
