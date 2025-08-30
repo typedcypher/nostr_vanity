@@ -94,7 +94,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.name }}
+          name: ${{ matrix.target }}
           path: ${{ matrix.name }}
 
   release:
@@ -117,7 +117,9 @@ jobs:
         run: |
           cd artifacts
           find . -name "*.tar.gz" -o -name "*.zip" | while read file; do
-            sha256sum "$file" >> ../checksums.txt
+            if [ -f "$file" ]; then
+              sha256sum "$file" >> ../checksums.txt
+            fi
           done
           cd ..
 
