@@ -6,6 +6,9 @@ on:
       - 'v*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 env:
   CARGO_TERM_COLOR: always
 
@@ -184,3 +187,4 @@ jobs:
             checksums.txt
           draft: false
           prerelease: false
+          make_latest: true
